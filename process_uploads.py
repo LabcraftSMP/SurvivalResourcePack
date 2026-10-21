@@ -15,7 +15,7 @@ class Params:
 
 
 
-SERVER_IP = 'localhost:12372'
+SERVER_IP = 'mc.labsmp.net:12481'
 
 path = os.path.dirname(os.path.realpath(__file__))
 player_resources = path + '/player_resources/'
