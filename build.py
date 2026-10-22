@@ -94,7 +94,7 @@ def process_simple_item(context: ResourceContext, parent_model: str):
 def custom_model_processor(context: ResourceContext):
     model = json.loads(open(context.folder_path + context.name + '.json', 'r').read())
 
-    texture_path = context.uuid + ':item/model/' + context.name
+    texture_path = context.uuid + ':item/' + context.group + '/' + context.name
     if 'textures' in model:
         model['textures']['0'] = texture_path
     else:
