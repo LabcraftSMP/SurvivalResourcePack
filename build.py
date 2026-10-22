@@ -25,8 +25,9 @@ resource_map = {}
 def main():
     shutil.copytree(path + '/resources', export)
 
-    for uuid in os.listdir(player_resources):
-        process_player_folder(uuid)
+    if (os.path.isdir(player_resources)):
+        for uuid in os.listdir(player_resources):
+            process_player_folder(uuid)
 
     shutil.make_archive(export, 'zip', export)
     shutil.rmtree(path + '/export/resources')
