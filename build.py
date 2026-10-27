@@ -100,6 +100,8 @@ def custom_model_processor(context: ResourceContext):
         model['textures']['0'] = texture_path
     else:
         model['textures'] = { '0': texture_path }
+    
+    model['textures']['particle'] = '#0'
 
     process_item(context, model)
 
